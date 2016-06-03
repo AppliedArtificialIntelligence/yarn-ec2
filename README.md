@@ -20,7 +20,7 @@ This two step procedure allows you to add and remove slaves on the fly.
   - ```./yarn-ec2 -k mykey -i mypem.pem -s nslave addspot cluster-name```
   - On demand price is used by default, you can change it by ```--spot-price``` option.
 - Both addslave and addspot will send request to EC2 and may not be fullfilled immediately
-  - They will connect to the master node after one bootstrap (which takes around 1 minimute).
+  - They will connect to the master node after one bootstrap (which takes around 1 minute).
   - You can browse the yarn resource manager for the status of the cluster.
 - Shutdown the machines manually in ec2 panel
 

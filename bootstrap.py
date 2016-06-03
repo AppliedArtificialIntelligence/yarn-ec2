@@ -100,7 +100,7 @@ def install_xgboost():
 ### Script section ###
 def run(cmd):
     try:
-        print cmd
+        print(cmd)
         logging.info(cmd)
         proc = subprocess.Popen(cmd, shell=True, env = ENVIRON,
                                 stdout=subprocess.PIPE, stderr = subprocess.PIPE)
@@ -111,9 +111,9 @@ def run(cmd):
             logging.error(out)
             logging.error(err)
         else:
-            print out
+            print(out)
     except Exception as e:
-        print(str(e))
+        print((str(e)))
         logging.error('Exception running: %s' % cmd)
         logging.error(str(e))
         pass
@@ -168,7 +168,7 @@ def install_hadoop(is_master):
             if name in rmap:
                 prop['value'].text = str(rmap[name])
                 rset.add(name)
-        for name, text in rmap.iteritems():
+        for name, text in rmap.items():
             if name in rset:
                 continue
             prop = ElementTree.SubElement(root, 'property')
